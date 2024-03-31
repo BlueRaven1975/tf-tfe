@@ -10,7 +10,7 @@ resource "tfe_workspace" "tf_github" {
   name        = "tf-github"
 }
 
-resource "tfe_workspace" "tf_minikube" {
+resource "tfe_workspace" "tf_local_k8s_cluster" {
   description = "Setup and configure a local K8s cluster with Terraform"
   name        = "tf-local-k8s-cluster"
 }
