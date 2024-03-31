@@ -11,8 +11,8 @@ resource "tfe_workspace" "tf_github" {
 }
 
 resource "tfe_workspace" "tf_minikube" {
-  description = "Setup and configure Minikube on my local laptop with Terraform"
-  name        = "tf-minikube"
+  description = "Setup and configure a local K8s cluster with Terraform"
+  name        = "tf-local-k8s-cluster"
 }
 
 resource "tfe_workspace" "tf_tfe" {
