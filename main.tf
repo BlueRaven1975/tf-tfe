@@ -5,6 +5,11 @@ resource "tfe_organization" "this" {
 }
 
 # Workspaces
+resource "tfe_workspace" "tf_argocd_apps" {
+  description = "Deploy ArgoCD Applications manifests on my local K8s cluster with Terraform"
+  name        = "tf-argocd-apps"
+}
+
 resource "tfe_workspace" "tf_github" {
   description = "Manage my GitHub repositories via Terraform"
   name        = "tf-github"
