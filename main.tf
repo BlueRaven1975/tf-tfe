@@ -9,6 +9,10 @@ resource "tfe_organization_default_settings" "this" {
   default_execution_mode = "local"
 }
 
+# Organization Token
+resource "tfe_organization_token" "this" {
+}
+
 # Workspaces
 resource "tfe_workspace" "tf_argocd_apps" {
   description = "Deploy ArgoCD Applications manifests on my local K8s cluster with Terraform"
