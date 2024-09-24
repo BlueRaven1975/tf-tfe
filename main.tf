@@ -1,7 +1,8 @@
 # Organization
 resource "tfe_organization" "this" {
-  email = "romano.romano@gmail.com"
-  name  = "BlueRaven1975"
+  cost_estimation_enabled = true
+  email                   = "romano.romano@gmail.com"
+  name                    = "BlueRaven1975"
 }
 
 # Organization Settings
