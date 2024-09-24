@@ -29,3 +29,9 @@ resource "tfe_workspace" "tf_tfe" {
   description = "Manage my Terraform Cloud instance with Terraform"
   name        = "tf-tfe"
 }
+
+# Workspaces Settings
+resource "tfe_workspace_settings" "tf_github" {
+  execution_mode = "remote"
+  workspace_id   = tfe_workspace.tf_github.id
+}
