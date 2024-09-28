@@ -73,6 +73,11 @@ resource "tfe_workspace" "tf_tfe" {
 }
 
 # Workspaces Settings
+resource "tfe_workspace_settings" "tf_argocd_apps" {
+  execution_mode = "remote"
+  workspace_id   = tfe_workspace.tf_argocd_apps.id
+}
+
 resource "tfe_workspace_settings" "tf_github" {
   execution_mode = "remote"
   workspace_id   = tfe_workspace.tf_github.id
