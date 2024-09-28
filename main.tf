@@ -83,6 +83,11 @@ resource "tfe_workspace_settings" "tf_github" {
   workspace_id   = tfe_workspace.tf_github.id
 }
 
+resource "tfe_workspace_settings" "tf_local_k8s_cluster" {
+  execution_mode = "remote"
+  workspace_id   = tfe_workspace.tf_local_k8s_cluster.id
+}
+
 resource "tfe_workspace_settings" "tf_tfe" {
   execution_mode = "remote"
   workspace_id   = tfe_workspace.tf_tfe.id
