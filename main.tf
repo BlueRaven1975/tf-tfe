@@ -34,6 +34,12 @@ resource "tfe_workspace" "tf_github" {
   description         = "Manage my GitHub repositories via Terraform"
   global_remote_state = true
   name                = "tf-github"
+
+  vcs_repo {
+    identifier     = "BlueRaven1975/tf-github"
+    oauth_token_id = tfe_oauth_client.this.oauth_token_id
+  }
+
 }
 
 resource "tfe_workspace" "tf_local_k8s_cluster" {
