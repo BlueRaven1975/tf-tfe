@@ -16,7 +16,7 @@ resource "tfe_organization" "this" {
 
 # Organization Settings
 resource "tfe_organization_default_settings" "this" {
-  default_execution_mode = "local"
+  default_execution_mode = "remote"
 }
 
 # Organization Token
