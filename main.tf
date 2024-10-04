@@ -34,6 +34,7 @@ resource "tfe_workspace" "tf_argocd_apps" {
   description         = "Deploy ArgoCD Applications manifests on my local K8s cluster with Terraform"
   global_remote_state = true
   name                = "tf-argocd-apps"
+  terraform_version   = "~> 1.9.0"
 
   vcs_repo {
     identifier     = "BlueRaven1975/tf-argocd-apps"
@@ -46,6 +47,7 @@ resource "tfe_workspace" "tf_github" {
   description         = "Manage my GitHub repositories via Terraform"
   global_remote_state = true
   name                = "tf-github"
+  terraform_version   = "~> 1.9.0"
 
   vcs_repo {
     identifier     = "BlueRaven1975/tf-github"
@@ -58,6 +60,7 @@ resource "tfe_workspace" "tf_local_k8s_cluster" {
   description         = "Setup and configure a local K8s cluster with Terraform"
   global_remote_state = true
   name                = "tf-local-k8s-cluster"
+  terraform_version   = "~> 1.9.0"
 
   vcs_repo {
     identifier     = "BlueRaven1975/tf-local-k8s-cluster"
@@ -70,6 +73,7 @@ resource "tfe_workspace" "tf_tfe" {
   description         = "Manage my Terraform Cloud instance with Terraform"
   global_remote_state = true
   name                = "tf-tfe"
+  terraform_version   = "~> 1.9.0"
 
   vcs_repo {
     identifier     = "BlueRaven1975/tf-tfe"
