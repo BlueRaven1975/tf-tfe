@@ -14,10 +14,6 @@ resource "tfe_organization" "this" {
   name                    = "BlueRaven1975"
 }
 
-# Organization Token
-resource "tfe_organization_token" "this" {
-}
-
 # Variable sets
 resource "tfe_variable_set" "this" {
   global = true
