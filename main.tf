@@ -14,11 +14,6 @@ resource "tfe_organization" "this" {
   name                    = "BlueRaven1975"
 }
 
-# Organization Settings
-resource "tfe_organization_default_settings" "this" {
-  default_execution_mode = "remote"
-}
-
 # Organization Token
 resource "tfe_organization_token" "this" {
 }
