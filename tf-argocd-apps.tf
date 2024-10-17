@@ -11,3 +11,9 @@ resource "tfe_workspace" "tf_argocd_apps" {
   }
 
 }
+
+# Workspace Settings
+resource "tfe_workspace_settings" "tf_argocd_apps" {
+  execution_mode = "local"
+  workspace_id   = tfe_workspace.tf_argocd_apps.id
+}
