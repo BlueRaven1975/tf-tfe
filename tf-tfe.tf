@@ -1,12 +1,4 @@
 # Workspace Variables
-resource "tfe_variable" "github_token" {
-  category     = "terraform"
-  description  = "Terraform Cloud (Full Access)"
-  key          = "github_token"
-  sensitive    = true
-  workspace_id = tfe_workspace.tf_tfe.id
-}
-
 resource "tfe_variable" "tfe_token" {
   category     = "terraform"
   description  = "Terraform Cloud (Full Access)"
