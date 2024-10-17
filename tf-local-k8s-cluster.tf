@@ -12,3 +12,8 @@ resource "tfe_workspace" "tf_local_k8s_cluster" {
 
 }
 
+# Workspace Settings
+resource "tfe_workspace_settings" "tf_local_k8s_cluster" {
+  execution_mode = "local"
+  workspace_id   = tfe_workspace.tf_local_k8s_cluster.id
+}
