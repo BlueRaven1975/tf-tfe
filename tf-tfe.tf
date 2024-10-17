@@ -1,3 +1,12 @@
+# Workspace Variables
+resource "tfe_variable" "tfe_token" {
+  category     = "terraform"
+  description  = "Terraform Cloud (Full Access)"
+  key          = "tfe_token"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_tfe.id
+}
+
 # Workspace
 resource "tfe_workspace" "tf_tfe" {
   description         = "Manage my Terraform Cloud instance with Terraform"
