@@ -14,12 +14,6 @@ resource "tfe_organization" "this" {
   name                    = "BlueRaven1975"
 }
 
-# Variable sets
-resource "tfe_variable_set" "this" {
-  global = true
-  name   = "tokens"
-}
-
 # Workspaces
 resource "tfe_workspace" "tf_argocd_apps" {
   description         = "Deploy ArgoCD Applications manifests on my local K8s cluster with Terraform"
