@@ -1,3 +1,4 @@
+# Workspace
 resource "tfe_workspace" "tf_local_k8s_cluster" {
   description         = "Setup and configure a local K8s cluster with Terraform"
   global_remote_state = true
