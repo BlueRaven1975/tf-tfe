@@ -20,3 +20,9 @@ resource "tfe_workspace" "tf_tfe" {
   }
 
 }
+
+# Workspace Variable Sets
+resource "tfe_workspace_variable_set" "tf_tfe" {
+  variable_set_id = tfe_variable_set.shared_tokens.id
+  workspace_id    = tfe_workspace.tf_tfe.id
+}
