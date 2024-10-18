@@ -15,6 +15,14 @@ resource "tfe_variable" "aws_secret_access_key" {
   workspace_id = tfe_workspace.tf_aws.id
 }
 
+resource "tfe_variable" "middleware_api_key" {
+  category     = "terraform"
+  description  = "Middleware.io API key"
+  key          = "middleware_api_key"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_aws.id
+}
+
 # Workspace
 resource "tfe_workspace" "tf_aws" {
   description         = "Manage my AWS infrastructure with Terraform"
