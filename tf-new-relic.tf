@@ -4,7 +4,7 @@ resource "tfe_variable" "tf_new_relic_new_relic_api_key" {
   description  = "Terraform Cloud (Full Access)"
   key          = "new_relic_api_key"
   sensitive    = true
-  workspace_id = tfe_workspace.tf_aws.id
+  workspace_id = tfe_workspace.tf_new_relic.id
 }
 
 # Workspace
