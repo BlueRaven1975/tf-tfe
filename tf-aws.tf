@@ -1,7 +1,7 @@
 # Workspace Variables
 resource "tfe_variable" "aws_access_key_id" {
   category     = "terraform"
-  description  = "Terraform Cloud service account AWS access key ID"
+  description  = "Terraform Cloud (Full Access)"
   key          = "aws_access_key_id"
   sensitive    = true
   workspace_id = tfe_workspace.tf_aws.id
@@ -9,7 +9,7 @@ resource "tfe_variable" "aws_access_key_id" {
 
 resource "tfe_variable" "aws_secret_access_key" {
   category     = "terraform"
-  description  = "Terraform Cloud service account AWS secret access key"
+  description  = "Terraform Cloud (Full Access)"
   key          = "aws_secret_access_key"
   sensitive    = true
   workspace_id = tfe_workspace.tf_aws.id
