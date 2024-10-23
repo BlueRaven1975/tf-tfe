@@ -1,5 +1,5 @@
 # Workspace Variables
-resource "tfe_variable" "new_relic_api_key" {
+resource "tfe_variable" "tf_new_relic_new_relic_api_key" {
   category     = "terraform"
   description  = "Terraform Cloud (Full Access)"
   key          = "new_relic_api_key"

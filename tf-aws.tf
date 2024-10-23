@@ -23,7 +23,7 @@ resource "tfe_variable" "middleware_api_key" {
   workspace_id = tfe_workspace.tf_aws.id
 }
 
-resource "tfe_variable" "new_relic_api_key" {
+resource "tfe_variable" "tf_aws_new_relic_api_key" {
   category     = "terraform"
   description  = "New Relic API key"
   key          = "new_relic_api_key"
