@@ -1,7 +1,7 @@
 # Workspace Variables
 resource "tfe_variable" "dockerhub_token" {
   category     = "terraform"
-  description  = "GitHub Actions - Full Access"
+  description  = "Docker Hub API Token"
   key          = "dockerhub_token"
   sensitive    = true
   workspace_id = tfe_workspace.tf_github.id
@@ -9,7 +9,7 @@ resource "tfe_variable" "dockerhub_token" {
 
 resource "tfe_variable" "dockerhub_username" {
   category     = "terraform"
-  description  = "GitHub Actions - Full Access"
+  description  = "Docker Hub User Name"
   key          = "dockerhub_username"
   sensitive    = true
   workspace_id = tfe_workspace.tf_github.id
