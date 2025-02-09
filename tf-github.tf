@@ -1,3 +1,20 @@
+# Workspace Variables
+resource "tfe_variable" "dockerhub_token" {
+  category     = "terraform"
+  description  = "GitHub Actions - Full Access"
+  key          = "dockerhub_token"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
+resource "tfe_variable" "dockerhub_username" {
+  category     = "terraform"
+  description  = "GitHub Actions - Full Access"
+  key          = "dockerhub_username"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
 # Workspace
 resource "tfe_workspace" "tf_github" {
   description         = "Manage my GitHub repositories via Terraform"
