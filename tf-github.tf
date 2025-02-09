@@ -1,4 +1,12 @@
 # Workspace Variables
+resource "tfe_variable" "actions_sa_key" {
+  category     = "terraform"
+  description  = "GitHub Actions Service Account Key"
+  key          = "actions_sa_key"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
 resource "tfe_variable" "dockerhub_token" {
   category     = "terraform"
   description  = "Docker Hub API Token"
@@ -11,6 +19,22 @@ resource "tfe_variable" "dockerhub_username" {
   category     = "terraform"
   description  = "Docker Hub User Name"
   key          = "dockerhub_username"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
+resource "tfe_variable" "ec2_host" {
+  category     = "terraform"
+  description  = "EC2 Instance Hostname"
+  key          = "ec2_host"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
+resource "tfe_variable" "ec2_user" {
+  category     = "terraform"
+  description  = "EC2 Instance User Name"
+  key          = "ec2_user"
   sensitive    = true
   workspace_id = tfe_workspace.tf_github.id
 }
