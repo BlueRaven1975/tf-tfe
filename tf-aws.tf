@@ -15,6 +15,22 @@ resource "tfe_variable" "aws_secret_access_key" {
   workspace_id = tfe_workspace.tf_aws.id
 }
 
+resource "tfe_variable" "db_password" {
+  category     = "terraform"
+  description  = "Master password for the RDS instance"
+  key          = "db_password"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_aws.id
+}
+
+resource "tfe_variable" "db_username" {
+  category     = "terraform"
+  description  = "Master username for the RDS instance"
+  key          = "db_username"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_aws.id
+}
+
 resource "tfe_variable" "middleware_api_key" {
   category     = "terraform"
   description  = "Middleware.io API key"
