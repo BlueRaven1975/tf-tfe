@@ -31,6 +31,14 @@ resource "tfe_variable" "db_username" {
   workspace_id = tfe_workspace.tf_aws.id
 }
 
+resource "tfe_variable" "ec2_flavour" {
+  category     = "terraform"
+  description  = "Flavour of the EC2 instance to be created"
+  key          = "ec2_flavour"
+  sensitive    = false
+  workspace_id = tfe_workspace.tf_aws.id
+}
+
 resource "tfe_variable" "middleware_api_key" {
   category     = "terraform"
   description  = "Middleware.io API key"
