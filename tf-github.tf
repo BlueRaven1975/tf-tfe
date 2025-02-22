@@ -55,6 +55,14 @@ resource "tfe_variable" "rds_app_user" {
   workspace_id = tfe_workspace.tf_github.id
 }
 
+resource "tfe_variable" "rds_host" {
+  category     = "terraform"
+  description  = "RDS instance hostname"
+  key          = "rds_host"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
 resource "tfe_variable" "rds_master_pass" {
   category     = "terraform"
   description  = "Master password for the RDS instance"
