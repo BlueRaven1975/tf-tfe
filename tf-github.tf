@@ -39,6 +39,38 @@ resource "tfe_variable" "ec2_user" {
   workspace_id = tfe_workspace.tf_github.id
 }
 
+resource "tfe_variable" "rds_app_pass" {
+  category     = "terraform"
+  description  = "Application password for database(s) in RDS"
+  key          = "rds_app_pass"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
+resource "tfe_variable" "rds_app_user" {
+  category     = "terraform"
+  description  = "Application username for database(s) in RDS"
+  key          = "rds_app_user"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
+resource "tfe_variable" "rds_master_pass" {
+  category     = "terraform"
+  description  = "Master password for the RDS instance"
+  key          = "rds_master_pass"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
+resource "tfe_variable" "rds_master_user" {
+  category     = "terraform"
+  description  = "Master username for the RDS instance"
+  key          = "rds_master_user"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
 # Workspace
 resource "tfe_workspace" "tf_github" {
   description         = "Manage my GitHub repositories via Terraform"
