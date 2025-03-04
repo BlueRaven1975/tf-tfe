@@ -15,6 +15,14 @@ resource "tfe_variable" "aws_secret_access_key" {
   workspace_id = tfe_workspace.tf_aws.id
 }
 
+resource "tfe_variable" "cloudns_api_key" {
+  category     = "terraform"
+  description  = "ClouDNS API key"
+  key          = "cloudns_api_key"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_aws.id
+}
+
 resource "tfe_variable" "db_password" {
   category     = "terraform"
   description  = "Master password for the RDS instance"
