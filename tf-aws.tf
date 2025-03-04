@@ -47,6 +47,14 @@ resource "tfe_variable" "ec2_flavour" {
   workspace_id = tfe_workspace.tf_aws.id
 }
 
+resource "tfe_variable" "github_token" {
+  category     = "terraform"
+  description  = "GitHub API token"
+  key          = "github_token"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_aws.id
+}
+
 resource "tfe_variable" "middleware_api_key" {
   category     = "terraform"
   description  = "Middleware.io API key"
