@@ -47,10 +47,10 @@ resource "tfe_variable" "ec2_flavour" {
   workspace_id = tfe_workspace.tf_aws.id
 }
 
-resource "tfe_variable" "github_token" {
+resource "tfe_variable" "github_actions_token" {
   category     = "terraform"
-  description  = "GitHub API token"
-  key          = "github_token"
+  description  = "GitHub API token for triggering Actions"
+  key          = "github_actions_token"
   sensitive    = true
   workspace_id = tfe_workspace.tf_aws.id
 }
