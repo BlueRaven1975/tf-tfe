@@ -1,8 +1,8 @@
 # Workspace Variables
-resource "tfe_variable" "cloudflare_api_key" {
+resource "tfe_variable" "cloudflare_api_token" {
   category     = "terraform"
-  description  = "Cloudflare API key"
-  key          = "cloudflare_api_key"
+  description  = "Cloudflare API token"
+  key          = "cloudflare_api_token"
   sensitive    = true
   workspace_id = tfe_workspace.tf_cloudflare.id
 }
