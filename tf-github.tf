@@ -1,4 +1,20 @@
 # Workspace Variables
+resource "tfe_variable" "actions_sa_aws_access_key_id" {
+  category     = "terraform"
+  description  = "GitHub Actions Service Account AWS Access Key ID"
+  key          = "actions_sa_aws_access_key_id"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
+resource "tfe_variable" "actions_sa_aws_secret_access_key" {
+  category     = "terraform"
+  description  = "GitHub Actions Service Account AWS Secret Access Key"
+  key          = "actions_sa_aws_secret_access_key"
+  sensitive    = true
+  workspace_id = tfe_workspace.tf_github.id
+}
+
 resource "tfe_variable" "actions_sa_key" {
   category     = "terraform"
   description  = "GitHub Actions Service Account Key"
